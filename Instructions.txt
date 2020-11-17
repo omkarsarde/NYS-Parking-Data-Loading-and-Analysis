@@ -1,0 +1,71 @@
+BIG DATA PROJECT PHASE 3 :
+
+In this project, we loaded and analyzed big amounts of data on Parking violations from the NYC Open data site. 
+We cleaned the data to make it convenient and loaded it to a database using a MySQL database and Java.
+
+Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+Prerequisites
+You will need to have the following software installed in your machine:
+- JAVA JDK
+- MySQL Server, MySQL Shell
+
+You will need the following files on your local computer:
+- Violation_codes.cvs
+- The parking violation files per year in CSV format
+
+Additionally, you might need to download a driver for connecting to MySQL Workbench if you do not have it already:
+
+MySQL Jar Link: https://dev.mysql.com/downloads/connector/j/5.1.htm
+Also found here : “mysql:mysql-connector-java:8.0.20”
+
+Installation:
+
+Once you have downloaded and unzipped the jar file, deploy it into the application classpath:
+
+-If you are using IntelliJ:
+
+Add the jar file to the libraries folder in your project.
+
+-If you are using Eclipse:
+
+1: Drag the file to your project
+2: Right-click it and select Build Path and add it to the build path
+
+Deployment:
+
+Connecting to the server:
+
+1: Open the DataLoading.java file.
+2: Change the String pwd to the password you set for your MySQL server.
+3: Change the values of the String violationCodesFileLocation to the one where your .cvs file is.
+4: Change the values of the String fileLocations to the location of your parking violation files that are stored in .cvs format.
+5: Run the DataLoading.java program
+NOTE: If you get an SSL error, you might need to add the following to the database URL string: useSSL=false
+
+To load the large data fast, we can split the files and load each one individually. 
+Create a separate folder for each year like 2020 for data from 2020. 
+Use the terminal/command prompt to split the files - https://eikhart.com/blog/autosplit-csv
+
+split -l 500000 split_me
+
+for i in *; do mv "$i" "$i.csv"; done 
+
+The second command creates multiple files with 500,000 rows in each file. Delete the first row (headers) in the first file to make all the files alike. 
+
+Loading data to the tables:
+
+Once the database and tables have been created we load data to the tables using the following methods:
+- LoadParking violations data()
+- LoadViolationCodesData()
+- LoadIssuerInfo()
+- LoadVehicleInfo()
+
+Run the script at every attempt of populating desired tables, commenting on the other methods as needed. 
+
+
+Authors
+Omkar Sarde
+Sharwari Salunkhe
+
