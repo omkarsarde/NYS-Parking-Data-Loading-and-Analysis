@@ -18,6 +18,7 @@
   </tr>
  </table>
  <br>
+ 
  # Data Analytics Through Multiple Linear Regression
 <table>
   <tr>
@@ -32,6 +33,8 @@
   </tr>
  </table>
  <br>
+ 
+ 
  # Authors
  Omkar Sarde
  <br> Sharwari Salunkhe
