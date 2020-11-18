@@ -17,7 +17,7 @@
    <td valign="top"><img src="/R_Files/violationTimes.jpg",width="25%"></td>
   </tr>
  </table>
- 
+ <br>
  # Data Analytics Through Multiple Linear Regression
 <table>
   <tr>
@@ -31,6 +31,7 @@
     <td valign="top"><img src="/R_Files/MLR_month.png",width="33%"></td>
   </tr>
  </table>
+ <br>
  # Authors
  Omkar Sarde
  <br> Sharwari Salunkhe
